@@ -1,0 +1,7 @@
+- name: Install stackdriver in linux systems
+  include: linux.yml
+  when: linux_os == "present"
+
+- name: Configure tomcat
+  include: Install stackdriver in windows systems
+  when: window_os == "present"

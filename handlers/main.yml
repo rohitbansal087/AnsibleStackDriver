@@ -1,0 +1,6 @@
+---
+- name: "restart {{ agent_type }} agent"
+  service:
+    name: "{{ vars[agent_type + '_service_name'] }}"
+    state: restarted
+  when: package_state == 'present' and not ansible_check_mode

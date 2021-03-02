@@ -1,0 +1,9 @@
+---
+- name: Download StackdriverLogging-v1-14
+  win_get_url:
+    url: https://storage.googleapis.com/binaries2/StackdriverLogging-v1-14.exe
+    dest: C:\Users\Public\Downloads\StackdriverLogging-v1-14.exe
+
+
+ - name: Install stackdriver
+   win_shell: C:\Users\Public\Downloads\StackdriverLogging-v1-14.exe /S
